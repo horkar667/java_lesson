@@ -1,3 +1,4 @@
+package Algorithms;
 class Algorithm {
   public static void main(String[] args) {
     int[] arr = {68, 55, 72, 93, 87};
