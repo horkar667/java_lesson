@@ -24,6 +24,10 @@ public class Lesson10 {
         System.out.println(ans);
     }
 
-    
+    System.out.println();
+
+    for (int i = 1; i <= n; i++) {
+      System.out.println(n - i + 1);
+    }
   }
 }
