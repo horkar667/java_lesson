@@ -9,21 +9,17 @@ class Algorithm {
     int[] x;
     x = new int[5];
     int min = 0;
-    int max = 0;
-    for(int i = 0; i < arr.length; i++) {
-      if(max < arr[i]) {
-        max = arr[i];
-      }
-    }
+    int num = arr[0];
     for(int i = 0; i < arr.length; i++) {
       for(int y = 0; y < arr.length; y++) {
-        if(min < arr[y] && arr[y] < max) {
+        min = arr[i];
+        num = 0;
+        if(min > arr[y]){
           min = arr[y];
-        } else if(max == arr[i]) {
-          min = max;
+          num = y;
         }
-        x[i] = min;
       }
+      x[num] = arr[i];
     }
     System.out.println("");
     for(int i = 0; i < x.length; i++) {
