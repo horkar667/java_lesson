@@ -8,19 +8,21 @@ class Algorithm {
 
     int[] x;
     x = new int[5];
-    int min = 0;
-    int num = arr[0];
+    int min = 100;
+    int num = 0;
     for(int i = 0; i < arr.length; i++) {
-      for(int y = 0; y < arr.length; y++) {
-        min = arr[i];
-        num = 0;
-        if(min > arr[y]){
-          min = arr[y];
-          num = y;
+      for(int j = 0; j < arr.length; j++) {
+        if(num < arr[j]){
+          if(min > arr[j]) {
+            min = arr[j];
+          }
         }
       }
-      x[num] = arr[i];
+      num = min;
+      x[i] = min;
+      min = 100;
     }
+
     System.out.println("");
     for(int i = 0; i < x.length; i++) {
       System.out.println(x[i]);
